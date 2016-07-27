@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homescreen"
+    android:scrollbars="vertical"
+    tools:context="com.hashrail.moneyreview.StartActivity">
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:background="@drawable/startbutton"
+        android:textColor="#ffffff"
+        android:id="@+id/btnstart"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginBottom="97dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

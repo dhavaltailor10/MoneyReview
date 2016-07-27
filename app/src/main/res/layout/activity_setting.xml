@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.hashrail.moneyreview.SettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarsetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarsetting"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textCurrancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:text="Set Currency"
+            android:textColor="@color/colorAccent"
+            android:textSize="25dp" />
+
+        <Spinner
+            android:id="@+id/spinnercurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCurrancy"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_marginTop="100dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewSetting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/test_admob_unit_id" />
+    </RelativeLayout>
+
+</RelativeLayout>

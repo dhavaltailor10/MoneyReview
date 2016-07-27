@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.hashrail.moneyreview.History">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarhistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ListView
+        android:id="@+id/listviewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarhistory"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewHistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/test_admob_unit_id" />
+    </RelativeLayout>
+
+</RelativeLayout>

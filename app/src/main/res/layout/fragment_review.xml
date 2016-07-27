@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hashrail.moneyreview.ReviewFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/mainRevieLayoutToHide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/mainrel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mostSpendingMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:text="Most Spending Money in"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chart"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/mostSpendingMoney"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MainValues"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mainrel"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="15dp"
+                    android:text="Date"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/operation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:text="2 operations"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_above="@+id/textviewlostMin"
+                    android:layout_alignLeft="@+id/date"
+                    android:layout_alignStart="@+id/date" />
+
+                <TextView
+                    android:id="@+id/textViewMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/uparrow"
+                    android:paddingTop="10dp"
+                    android:text="20000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/date"
+                    android:layout_alignLeft="@+id/operation"
+                    android:layout_alignStart="@+id/operation" />
+
+                <TextView
+                    android:id="@+id/textviewlostMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewMax"
+                    android:layout_toEndOf="@+id/textViewMax"
+                    android:layout_toRightOf="@+id/textViewMax"
+                    android:drawableLeft="@drawable/downarrow"
+                    android:drawablePadding="5dp"
+                    android:text="2000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_plus"
+        app:layout_anchorGravity="bottom|right|end" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewReview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/test_admob_unit_id" />
+    </RelativeLayout>
+
+</RelativeLayout>

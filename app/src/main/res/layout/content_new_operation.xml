@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.hashrail.moneyreview.NewOperation"
+    tools:showIn="@layout/activity_new_operation">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical|right"
+                android:hint="RS.0.00"
+                android:inputType="numberDecimal"
+                android:textSize="23sp" />
+
+            <requestFocus />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radiobtnexpenes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:paddingRight="15dp"
+                    android:text="Expenses" />
+
+                <RadioButton
+                    android:id="@+id/radiobtnprofit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profit" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editextcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|right"
+                android:hint="Select Category"
+                android:nextFocusDown="@id/editText2" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTexttitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical|right"
+                android:hint="Insert title like(give/taken by xyz)"
+                android:nextFocusDown="@id/editextcategory" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/datelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight=".5"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|right"
+                android:hint="Select Date"
+                android:nextFocusDown="@id/editTexttitle" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="320dp">
+
+            <Button
+                android:id="@+id/btnnok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:text="Ok"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="500dp">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewNewoperation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/test_admob_unit_id" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

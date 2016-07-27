@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    tools:context="com.hashrail.moneyreview.SumFragment">
+
+    <ListView
+        android:id="@+id/listsummary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/MainHideNoDataSummary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/listsummary"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageViewNoData"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp"
+            android:src="@drawable/nodata" />
+
+        <TextView
+            android:id="@+id/textViewNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewNoData"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="No Summary Details Found."
+            android:textColor="#b1afaf" />
+
+
+        <TextView
+            android:id="@+id/textviewClickPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewNoData"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="Click Plus Button to Add Events"
+
+            android:textColor="#b1afaf"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_plus"
+        app:layout_anchorGravity="bottom|right|end" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adViewSummary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/test_admob_unit_id" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
